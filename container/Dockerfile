@@ -16,14 +16,23 @@ RUN \
     nasm \
     cmake 
 
+# needed packages for master build
+RUN \
+  apt-get install -y \
+    libxml2-dev \
+    libexpat1-dev \
+    glib2.0-dev \
+    libglib2.0-dev \
+    gobject-introspection \
+    python-gi-dev \
+    libgirepository1.0-dev \
+    swig
+
 # strange extras for certain packages
-# build from master needs gobject-introspection and swig
 # croco needs gtk-doc
 # we use wine to test the build
 RUN \
   apt-get install -y \
-    gobject-introspection \
-    swig \
     gtk-doc-tools \
     xmlto \
     wget \
