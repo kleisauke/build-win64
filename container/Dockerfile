@@ -17,10 +17,13 @@ RUN \
     cmake 
 
 # strange extras for certain packages
+# build from master needs gobject-introspection and swig
 # croco needs gtk-doc
 # we use wine to test the build
 RUN \
   apt-get install -y \
+    gobject-introspection \
+    swig \
     gtk-doc-tools \
     xmlto \
     wget \
