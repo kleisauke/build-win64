@@ -888,18 +888,16 @@
     -->
 
   <autotools id="libvips-all"
-    autogen-sh="configure"
+    autogen-sh="autogen.sh"
     autogenargs="--enable-debug=no --without-OpenEXR --disable-introspection "
     makeargs="CFLAGS=-O3 CXXFLAGS=-O3"
     >
 
     <branch
-      repo="vips"
-      module="v8.7.0/vips-8.7.0.tar.gz"
-      version="8.7.0"
-      checkoutdir="8.7.0"
-      >
-    </branch>
+      repo="github.com"
+      module="jcupitt/libvips.git"
+      revision="master"
+    />
 
     <dependencies>
       <dep package="matio"/>
@@ -933,18 +931,16 @@
     -->
 
   <autotools id="libvips-web"
-    autogen-sh="configure"
+    autogen-sh="autogen.sh"
     autogenargs="--enable-debug=no --without-OpenEXR --without-matio --without-ppm --without-analyze --without-radiance --disable-introspection "
     makeargs="CFLAGS=-O3 CXXFLAGS=-O3"
     >
 
     <branch
-      repo="vips"
-      module="v8.7.0/vips-8.7.0.tar.gz"
-      version="8.7.0"
-      checkoutdir="8.7.0"
-      >
-    </branch>
+      repo="github.com"
+      module="jcupitt/libvips.git"
+      revision="master"
+    />
 
     <dependencies>
       <dep package="webp"/>
@@ -967,16 +963,15 @@
     -->
 
   <autotools id="libvips-transform"
-    autogen-sh="configure"
+    autogen-sh="autogen.sh"
     autogenargs="--enable-debug=no --without-OpenEXR --disable-introspection "
     makeargs="CFLAGS=-O3 CXXFLAGS=-O3"
     >
 
     <branch
-      repo="vips"
-      module="v8.7.0/vips-8.7.0.tar.gz"
-      version="8.7.0"
-      checkoutdir="8.7.0"
+      repo="github.com"
+      module="jcupitt/libvips.git"
+      revision="master"
       >
       <patch file="file:///home/john/develop/transform-7.32/transform.patch" strip="1"/>
     </branch>
